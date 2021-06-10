@@ -1,6 +1,6 @@
 val commonSettings = Seq(
-  scalaVersion := "2.11.11",
-  crossScalaVersions := Seq("2.11.11", "2.12.2"),
+  scalaVersion := "2.12.10",
+  crossScalaVersions := Seq("2.12.10"),
   scalacOptions ++= Seq(
     "-feature", "-deprecation",
     "-Xlint", "-Ywarn-unused-import", "-Xfatal-warnings"
@@ -49,10 +49,10 @@ lazy val zipper = crossProject.in(file("."))
       "org.scalatest" %%% "scalatest" % "3.0.3" % Test
     )
   )
-  .jvmSettings(
+  /*.jvmSettings(
     tutSettings,
     tutTargetDirectory := baseDirectory.value.getParentFile
-  )
+  )*/
 
 lazy val zipperJVM = zipper.jvm
 lazy val zipperJS = zipper.js
